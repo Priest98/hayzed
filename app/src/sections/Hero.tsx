@@ -50,7 +50,6 @@ export default function Hero() {
           src={`${import.meta.env.BASE_URL}images/hero-kaftan.jpg`}
           alt="Hayzed Casual African Luxury Kaftan"
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 20%' }}
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
