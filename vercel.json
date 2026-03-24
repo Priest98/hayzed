@@ -1,10 +1,11 @@
 {
+  "buildCommand": "cd app && npm install && npm run build",
+  "outputDirectory": "app/dist",
   "rewrites": [
     {
       "source": "/.netlify/functions/:path*",
       "destination": "/api/:path*"
     }
   ],
-  "cleanUrls": true,
-  "framework": "vite"
+  "cleanUrls": true
 }
