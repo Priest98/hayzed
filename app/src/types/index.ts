@@ -1,0 +1,36 @@
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  category: 'classic' | 'wedding' | 'premium' | 'custom' | 'hz-collection' | 'agbada' | 'kaftan' | 'casual';
+  description: string;
+  fabric: string;
+  fit: string;
+  care: string;
+  sizes: string[];
+  colors: string[];
+  inStock: boolean;
+}
+
+export interface CartItem extends Product {
+  quantity: number;
+  selectedSize: string;
+  selectedColor: string;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  avatar: string;
+  role: string;
+  content: string;
+  rating: number;
+}
+
+export interface InstagramPost {
+  id: string;
+  image: string;
+  likes: number;
+  caption: string;
+}
