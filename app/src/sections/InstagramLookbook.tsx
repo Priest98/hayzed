@@ -89,11 +89,12 @@ export default function InstagramLookbook() {
               className={`group relative aspect-square overflow-hidden transition-all duration-700 ease-fluid ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${200 + index * 100}ms` }}
+              style={{ transitionDelay: `${100 + index * 50}ms` }}
             >
               <img
                 src={`${import.meta.env.BASE_URL}${post.image}`}
                 alt={post.caption}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 ease-fluid group-hover:scale-110"
               />
               

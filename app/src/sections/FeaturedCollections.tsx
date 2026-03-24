@@ -82,7 +82,7 @@ function ProductCard({ product, index, isVisible }: ProductCardProps) {
       to={`/product/${product.id}`}
       className={`group block transition-all duration-700 ease-fluid ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
-      style={{ transitionDelay: `${200 + index * 150}ms` }}
+      style={{ transitionDelay: `${100 + index * 50}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -91,6 +91,7 @@ function ProductCard({ product, index, isVisible }: ProductCardProps) {
         <img
           src={`${import.meta.env.BASE_URL}${product.image}`}
           alt={product.name}
+          loading="lazy"
           className={`w-full h-full object-cover transition-all duration-700 ease-fluid ${isHovered ? 'scale-105' : 'scale-100'
             }`}
         />
