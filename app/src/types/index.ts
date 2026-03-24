@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   price: number;
   image: string;
-  category: 'classic' | 'wedding' | 'premium' | 'custom' | 'hz-collection' | 'agbada' | 'kaftan' | 'casual';
+  category: 'hz-collection' | 'agbada' | 'kaftan' | 'casual' | 'new-collection';
   description: string;
   fabric: string;
   fit: string;
