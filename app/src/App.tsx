@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
+import HelperBot from './components/HelperBot';
 import HomePage from './pages/HomePage';
 import ShopPage from './pages/ShopPage';
 import ProductPage from './pages/ProductPage';
@@ -45,6 +46,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <HelperBot />
         </div>
       </Router>
     </CartProvider>
