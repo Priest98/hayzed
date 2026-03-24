@@ -117,6 +117,7 @@ export default function ShopPage() {
       {/* Products Grid */}
       <div ref={sectionRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div
+          key={selectedCategory} // Add key to force re-render/re-animate on category change
           className={`grid gap-6 lg:gap-8 ${gridView === 'grid'
             ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
             : 'grid-cols-1 sm:grid-cols-2'
@@ -164,7 +165,7 @@ function ProductCard({ product, index, isVisible, gridView }: ProductCardProps) 
       to={`/product/${product.id}`}
       className={`group block transition-all duration-700 ease-fluid ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
-      style={{ transitionDelay: `${200 + index * 100}ms` }}
+      style={{ transitionDelay: `${index * 30}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -176,7 +177,6 @@ function ProductCard({ product, index, isVisible, gridView }: ProductCardProps) 
         <img
           src={`${import.meta.env.BASE_URL}${product.image}`}
           alt={product.name}
-          loading="lazy"
           className={`w-full h-full object-cover transition-all duration-700 ease-fluid ${isHovered ? 'scale-105' : 'scale-100'
             }`}
         />
