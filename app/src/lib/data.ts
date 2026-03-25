@@ -7,6 +7,7 @@ export const categories = [
   { id: 'kaftan', name: 'Kaftan' },
   { id: 'casual', name: 'Casual' },
   { id: 'new-collection', name: 'New Collection' },
+  { id: 'african-culture', name: 'African Culture' },
 ];
 
 export const allProducts: Product[] = [
@@ -211,6 +212,21 @@ export const allProducts: Product[] = [
     colors: ['Cream'],
     inStock: true,
   },
+  // African Culture Collection
+  ...Array.from({ length: 8 }, (_, i) => ({
+    id: `african-${i + 1}`,
+    name: `African Culture Design ${i + 1}`,
+    price: 65000 + (i * 5000),
+    image: `images/african-${i + 1}.jpeg`,
+    category: 'african-culture' as const,
+    description: 'A masterpiece representing the rich heritage and contemporary style of African culture.',
+    fabric: 'Premium Cultural Fabric',
+    fit: 'Classic Contemporary',
+    care: 'Dry Clean Recommended',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['Traditional Patterns'],
+    inStock: true,
+  })),
 ];
 
 export const featuredProducts = allProducts.filter(p => 
