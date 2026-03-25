@@ -7,7 +7,7 @@ export const categories = [
   { id: 'kaftan', name: 'Kaftan' },
   { id: 'casual', name: 'Casual' },
   { id: 'new-collection', name: 'New Collection' },
-  { id: 'african-culture', name: 'African Culture' },
+  { id: 'african-culture', name: 'New African culture style' },
 ];
 
 export const allProducts: Product[] = [
