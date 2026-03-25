@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MessageSquare, X, Send } from 'lucide-react';
+import { X, Send } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function HelperBot() {
