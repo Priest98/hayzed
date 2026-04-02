@@ -128,20 +128,21 @@ export const allProducts: Product[] = [
     colors: ['Traditional'],
     inStock: true,
   },
-  ...Array.from({ length: 2 }, (_, i) => ({
-    id: `agbada-${i + 9}`,
-    name: `Luxe Agbada ${i + 9}`,
-    price: 230000 + (i * 10000),
-    image: `images/agbada-${i + 9}.jpeg`,
+  {
+    id: 'agbada-10',
+    name: 'Luxe Agbada 10',
+    price: 240000,
+    image: 'images/agbada-10.jpeg',
+    images: ['images/agbada-10.jpeg', 'images/agbada-9.jpeg'],
     category: 'agbada' as const,
-    description: 'A grand and majestic Agbada set for high-profile occasions.',
+    description: 'A grand and majestic Agbada set for high-profile occasions, featuring contrasting premium textures and signature artisanal detailing.',
     fabric: 'Hand-woven Aso-oke / Premium Silk',
     fit: 'Traditional Grand Fit',
     care: 'Dry Clean Only',
     sizes: ['One Size (Adjustable)'],
     colors: ['Traditional'],
     inStock: true,
-  })),
+  },
   // Kaftan Collection
   {
     id: 'kaftan-1',
