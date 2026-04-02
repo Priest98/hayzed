@@ -12,7 +12,7 @@ export const categories = [
 export const allProducts: Product[] = [
   {
     id: 'hz-shirt',
-    name: 'HZ Shirt & Signature Set',
+    name: 'Shirt',
     price: 20000,
     image: 'images/hz-shirt-1.jpg',
     images: ['images/hz-shirt-1.jpg', 'images/hz-new-1.jpeg'],
@@ -28,11 +28,11 @@ export const allProducts: Product[] = [
   // HZ Collection (New)
   {
     id: 'hz-new-2',
-    name: 'HZ Urban Tunic',
+    name: 'HZ Up and Down',
     price: 35000,
     image: 'images/hz-new-2.jpeg',
     category: 'hz-collection',
-    description: 'Minimalist HZ Urban Tunic for everyday luxury.',
+    description: 'Minimalist HZ Up and Down set for everyday luxury.',
     fabric: 'Cotton Mix',
     fit: 'Relaxed Fit',
     care: 'Hand Wash Cold',
@@ -42,11 +42,11 @@ export const allProducts: Product[] = [
   },
   {
     id: 'hz-new-3',
-    name: 'HZ Elite Polo',
+    name: 'Elite Polo',
     price: 40000,
     image: 'images/hz-new-3.jpeg',
     category: 'hz-collection',
-    description: 'Sophisticated HZ Elite Polo with cultural detailing.',
+    description: 'Sophisticated Elite Polo with cultural detailing.',
     fabric: 'Premium Pique Cotton',
     fit: 'Slim Fit',
     care: 'Machine Wash Gentle',
@@ -57,7 +57,7 @@ export const allProducts: Product[] = [
   {
     id: 'hz-new-4',
     name: 'HZ Heritage Shirt',
-    price: 48000,
+    price: 35000,
     image: 'images/hz-new-4.jpeg',
     category: 'hz-collection',
     description: 'Timeless HZ Heritage Shirt featuring traditional patterns.',
@@ -87,7 +87,7 @@ export const allProducts: Product[] = [
   {
     id: 'agbada-4',
     name: 'Green Agbada',
-    price: 55000,
+    price: 100000,
     image: 'images/agbada-4.jpeg',
     category: 'agbada' as const,
     description: 'A grand and majestic Agbada set for high-profile occasions in a stunning green shade.',
@@ -101,7 +101,7 @@ export const allProducts: Product[] = [
   {
     id: 'agbada-6',
     name: 'Green Agbada with Embroidery',
-    price: 100000,
+    price: 55000,
     image: 'images/agbada-6.jpeg',
     images: ['images/agbada-6.jpeg', 'images/agbada-5.jpeg'],
     category: 'agbada' as const,
@@ -116,7 +116,7 @@ export const allProducts: Product[] = [
   {
     id: 'agbada-7',
     name: 'Luxe Agbada 7',
-    price: 210000,
+    price: 60000,
     image: 'images/agbada-7.jpeg',
     images: ['images/agbada-7.jpeg', 'images/agbada-3.jpeg', 'images/agbada-8.jpeg'],
     category: 'agbada' as const,
@@ -131,7 +131,7 @@ export const allProducts: Product[] = [
   {
     id: 'agbada-10',
     name: 'Luxe Agbada 10',
-    price: 240000,
+    price: 100000,
     image: 'images/agbada-10.jpeg',
     images: ['images/agbada-10.jpeg', 'images/agbada-9.jpeg'],
     category: 'agbada' as const,
@@ -191,7 +191,7 @@ export const allProducts: Product[] = [
   {
     id: 'kaftan-5',
     name: 'Premium Kaftan 5',
-    price: 85000,
+    price: 35000,
     image: 'images/kaftan-5.jpeg',
     category: 'kaftan' as const,
     description: 'Expertly tailored kaftan with intricate hand-embroidery.',
@@ -205,7 +205,7 @@ export const allProducts: Product[] = [
   {
     id: 'kaftan-7',
     name: 'Premium Kaftan 7',
-    price: 95000,
+    price: 60000,
     image: 'images/kaftan-7.jpeg',
     images: ['images/kaftan-7.jpeg', 'images/kaftan-6.jpeg'],
     category: 'kaftan' as const,
@@ -220,7 +220,7 @@ export const allProducts: Product[] = [
   {
     id: 'kaftan-9',
     name: 'Premium Kaftan 9',
-    price: 105000,
+    price: 45000,
     image: 'images/kaftan-9.jpeg',
     category: 'kaftan' as const,
     description: 'Expertly tailored kaftan with intricate hand-embroidery.',
@@ -380,7 +380,7 @@ export const allProducts: Product[] = [
   {
     id: 'african-6',
     name: 'African Culture Design 6',
-    price: 90000,
+    price: 40000,
     image: 'images/african-6.jpeg',
     images: ['images/african-6.jpeg', 'images/african-7.jpeg'],
     category: 'african-culture' as const,
@@ -395,7 +395,7 @@ export const allProducts: Product[] = [
   {
     id: 'african-8',
     name: 'African Culture Design 8',
-    price: 100000,
+    price: 40000,
     image: 'images/african-8.jpeg',
     category: 'african-culture' as const,
     description: 'A masterpiece representing the rich heritage and contemporary style of African culture.',
