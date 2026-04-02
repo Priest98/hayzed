@@ -92,6 +92,7 @@ function ProductCard({ product, index, isVisible }: ProductCardProps) {
           src={`${import.meta.env.BASE_URL}${product.image}`}
           alt={product.name}
           loading="lazy"
+          decoding="async"
           className={`w-full h-full object-cover transition-all duration-700 ease-fluid ${isHovered ? 'scale-105' : 'scale-100'
             }`}
         />
