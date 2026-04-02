@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Ruler, Sparkles, WashingMachine, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -18,6 +18,7 @@ const sizeGuide = [
 ];
 
 export default function ProductPage() {
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const { addItem } = useCart();
   const [selectedSize, setSelectedSize] = useState('');
@@ -62,11 +63,11 @@ export default function ProductPage() {
       <div className="min-h-screen bg-brand-off-white pt-24 sm:pt-28 flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-display text-3xl text-brand-black mb-4">Product Not Found</h1>
-          <Link to="/shop">
+          <button onClick={() => navigate('/shop')}>
             <Button className="bg-brand-black hover:bg-brand-grey text-white">
               Back to Shop
             </Button>
-          </Link>
+          </button>
         </div>
       </div>
     );
@@ -91,13 +92,13 @@ export default function ProductPage() {
           className={`mb-8 transition-all duration-700 ease-fluid ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
         >
-          <Link
-            to="/shop"
+          <button
+            onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 text-brand-grey hover:text-brand-black transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Back to Collections</span>
-          </Link>
+          </button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
