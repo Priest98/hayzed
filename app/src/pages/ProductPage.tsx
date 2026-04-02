@@ -26,6 +26,7 @@ export default function ProductPage() {
   const [showSizeGuide, setShowSizeGuide] = useState(false);
   const [addedToCart, setAddedToCart] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [activeImage, setActiveImage] = useState('');
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const product = products.find(p => p.id === id);
@@ -52,6 +53,7 @@ export default function ProductPage() {
     if (product) {
       setSelectedSize(product.sizes[0]);
       setSelectedColor(product.colors[0]);
+      setActiveImage(product.image);
     }
   }, [product]);
 
@@ -107,27 +109,32 @@ export default function ProductPage() {
           >
             <div className="aspect-[3/4] overflow-hidden bg-brand-light-grey rounded-lg">
               <img
-                src={`${import.meta.env.BASE_URL}${product.image}`}
+                src={`${import.meta.env.BASE_URL}${activeImage || product.image}`}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-all duration-500"
               />
             </div>
 
-            {/* Thumbnail Strip - In a real app, this would show multiple images */}
-            <div className="grid grid-cols-4 gap-2 mt-4">
-              {[1, 2, 3, 4].map((_, i) => (
-                <div
-                  key={i}
-                  className={`aspect-square bg-brand-light-grey rounded-lg overflow-hidden ${i === 0 ? 'ring-2 ring-brand-black' : ''}`}
-                >
-                  <img
-                    src={`${import.meta.env.BASE_URL}${product.image}`}
-                    alt={`${product.name} view ${i + 1}`}
-                    className="w-full h-full object-cover opacity-60"
-                  />
-                </div>
-              ))}
-            </div>
+            {/* Thumbnail Strip */}
+            {product.images && product.images.length > 1 && (
+              <div className="grid grid-cols-4 gap-2 mt-4">
+                {product.images.map((img, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveImage(img)}
+                    className={`aspect-square bg-brand-light-grey rounded-lg overflow-hidden transition-all ${
+                      (activeImage || product.image) === img ? 'ring-2 ring-brand-black opacity-100' : 'opacity-60 hover:opacity-100'
+                    }`}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}${img}`}
+                      alt={`${product.name} view ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Product Info */}
