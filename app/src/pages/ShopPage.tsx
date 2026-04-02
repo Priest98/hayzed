@@ -9,9 +9,7 @@ import { allProducts, categories } from '@/lib/data';
 
 export default function ShopPage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState(
-    searchParams.get('category') || 'all'
-  );
+  const selectedCategory = searchParams.get('category') || 'all';
   const [gridView, setGridView] = useState<'grid' | 'large'>('grid');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -22,17 +20,15 @@ export default function ShopPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const currentCategory = searchParams.get('category') || 'all';
-    if (selectedCategory !== currentCategory) {
-      if (selectedCategory === 'all') {
-        searchParams.delete('category');
-      } else {
-        searchParams.set('category', selectedCategory);
-      }
-      setSearchParams(searchParams, { replace: true });
+  const handleCategoryChange = (categoryId: string) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (categoryId === 'all') {
+      newParams.delete('category');
+    } else {
+      newParams.set('category', categoryId);
     }
-  }, [selectedCategory, searchParams, setSearchParams]);
+    setSearchParams(newParams, { replace: true });
+  };
 
   const filteredProducts = selectedCategory === 'all'
     ? allProducts
@@ -68,7 +64,7 @@ export default function ShopPage() {
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() => handleCategoryChange(category.id)}
                   className={`px-4 py-2 text-sm rounded-full transition-all duration-300 ${selectedCategory === category.id
                     ? 'bg-brand-black text-white'
                     : 'bg-white text-brand-grey hover:bg-brand-light-grey'
@@ -129,7 +125,7 @@ export default function ShopPage() {
           <div className="text-center py-20">
             <p className="text-brand-grey mb-4">No products found in this category.</p>
             <Button
-              onClick={() => setSelectedCategory('all')}
+              onClick={() => handleCategoryChange('all')}
               className="bg-brand-black hover:bg-brand-grey text-white"
             >
               View All Products

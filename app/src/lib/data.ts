@@ -10,9 +10,10 @@ export const categories = [
 ];
 
 export const allProducts: Product[] = [
+  // HZ Luxe Collection
   {
-    id: 'hz-shirt',
-    name: 'Shirt',
+    id: 'hz-1',
+    name: 'HZ Luxe 1',
     price: 20000,
     image: 'images/hz-shirt-1.jpg',
     images: ['images/hz-shirt-1.jpg', 'images/hz-new-1.jpeg'],
@@ -25,10 +26,9 @@ export const allProducts: Product[] = [
     colors: ['Cream', 'White', 'Black'],
     inStock: true,
   },
-  // HZ Collection (New)
   {
-    id: 'hz-new-2',
-    name: 'HZ Up and Down',
+    id: 'hz-2',
+    name: 'HZ Luxe 2',
     price: 35000,
     image: 'images/hz-new-2.jpeg',
     category: 'hz-collection',
@@ -41,8 +41,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'hz-new-3',
-    name: 'Elite Polo',
+    id: 'hz-3',
+    name: 'HZ Luxe 3',
     price: 40000,
     image: 'images/hz-new-3.jpeg',
     category: 'hz-collection',
@@ -55,8 +55,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'hz-new-4',
-    name: 'HZ Heritage Shirt',
+    id: 'hz-4',
+    name: 'HZ Luxe 4',
     price: 35000,
     image: 'images/hz-new-4.jpeg',
     category: 'hz-collection',
@@ -85,12 +85,12 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'agbada-4',
-    name: 'Green Agbada',
+    id: 'agbada-2',
+    name: 'Luxe Agbada 2',
     price: 100000,
     image: 'images/agbada-4.jpeg',
     category: 'agbada' as const,
-    description: 'A grand and majestic Agbada set for high-profile occasions in a stunning green shade.',
+    description: 'A grand and majestic Agbada set in a stunning green shade, representing luxury and heritage.',
     fabric: 'Hand-woven Aso-oke / Premium Silk',
     fit: 'Traditional Grand Fit',
     care: 'Dry Clean Only',
@@ -99,13 +99,13 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'agbada-6',
-    name: 'Green Agbada with Embroidery',
+    id: 'agbada-3',
+    name: 'Luxe Agbada 3',
     price: 55000,
     image: 'images/agbada-6.jpeg',
     images: ['images/agbada-6.jpeg', 'images/agbada-5.jpeg'],
     category: 'agbada' as const,
-    description: 'A grand and majestic Agbada set for high-profile occasions, featuring contrasting premium textures and intricate embroidery.',
+    description: 'A grand and majestic Agbada set for high-profile occasions, featuring intricate embroidery and signature textures.',
     fabric: 'Hand-woven Aso-oke / Premium Silk',
     fit: 'Traditional Grand Fit',
     care: 'Dry Clean Only',
@@ -114,13 +114,13 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'agbada-7',
-    name: 'Luxe Agbada 7',
+    id: 'agbada-4',
+    name: 'Luxe Agbada 4',
     price: 60000,
     image: 'images/agbada-7.jpeg',
     images: ['images/agbada-7.jpeg', 'images/agbada-3.jpeg', 'images/agbada-8.jpeg'],
     category: 'agbada' as const,
-    description: 'A grand and majestic Agbada set for high-profile occasions, showcasing the full range of our architectural designs.',
+    description: 'A grand and majestic Agbada set showcasing the full range of our architectural designs and heritage patterns.',
     fabric: 'Hand-woven Aso-oke / Premium Silk',
     fit: 'Traditional Grand Fit',
     care: 'Dry Clean Only',
@@ -129,13 +129,13 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'agbada-10',
-    name: 'Luxe Agbada 10',
+    id: 'agbada-5',
+    name: 'Luxe Agbada 5',
     price: 100000,
     image: 'images/agbada-10.jpeg',
     images: ['images/agbada-10.jpeg', 'images/agbada-9.jpeg'],
     category: 'agbada' as const,
-    description: 'A grand and majestic Agbada set for high-profile occasions, featuring contrasting premium textures and signature artisanal detailing.',
+    description: 'A grand and majestic Agbada set featuring contrasting premium textures and signature artisanal detailing.',
     fabric: 'Hand-woven Aso-oke / Premium Silk',
     fit: 'Traditional Grand Fit',
     care: 'Dry Clean Only',
@@ -146,7 +146,7 @@ export const allProducts: Product[] = [
   // Kaftan Collection
   {
     id: 'kaftan-1',
-    name: 'White with Stone Kaftan',
+    name: 'Premium Kaftan 1',
     price: 45000,
     image: 'images/kaftan-1.jpeg',
     category: 'kaftan' as const,
@@ -160,7 +160,7 @@ export const allProducts: Product[] = [
   },
   {
     id: 'kaftan-2',
-    name: 'Stripe Kaftan',
+    name: 'Premium Kaftan 2',
     price: 40000,
     image: 'images/kaftan-2.jpeg',
     images: ['images/kaftan-2.jpeg', 'images/kaftan-4.jpeg'],
@@ -175,7 +175,7 @@ export const allProducts: Product[] = [
   },
   {
     id: 'kaftan-3',
-    name: 'Wine Kaftan',
+    name: 'Premium Kaftan 3',
     price: 40000,
     image: 'images/kaftan-3.jpeg',
     images: ['images/kaftan-3.jpeg', 'images/kaftan-8.jpeg'],
@@ -189,8 +189,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'kaftan-5',
-    name: 'Premium Kaftan 5',
+    id: 'kaftan-4',
+    name: 'Premium Kaftan 4',
     price: 35000,
     image: 'images/kaftan-5.jpeg',
     category: 'kaftan' as const,
@@ -203,8 +203,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'kaftan-7',
-    name: 'Premium Kaftan 7',
+    id: 'kaftan-5',
+    name: 'Premium Kaftan 5',
     price: 60000,
     image: 'images/kaftan-7.jpeg',
     images: ['images/kaftan-7.jpeg', 'images/kaftan-6.jpeg'],
@@ -218,8 +218,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'kaftan-9',
-    name: 'Premium Kaftan 9',
+    id: 'kaftan-6',
+    name: 'Premium Kaftan 6',
     price: 45000,
     image: 'images/kaftan-9.jpeg',
     category: 'kaftan' as const,
@@ -275,8 +275,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'casual-9',
-    name: 'Casual Luxe 9',
+    id: 'casual-4',
+    name: 'Casual Luxe 4',
     price: 40000,
     image: 'images/casual-9.jpeg',
     images: ['images/casual-9.jpeg', 'images/casual-6.jpeg'],
@@ -290,8 +290,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'casual-10',
-    name: 'Casual Luxe 10',
+    id: 'casual-5',
+    name: 'Casual Luxe 5',
     price: 35000,
     image: 'images/casual-10.jpeg',
     images: ['images/casual-10.jpeg', 'images/casual-5.jpeg'],
@@ -305,8 +305,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'casual-11',
-    name: 'Casual Luxe 11',
+    id: 'casual-6',
+    name: 'Casual Luxe 6',
     price: 45000,
     image: 'images/casual-11.jpeg',
     category: 'casual' as const,
@@ -319,8 +319,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'casual-12',
-    name: 'Casual Luxe 12',
+    id: 'casual-7',
+    name: 'Casual Luxe 7',
     price: 40000,
     image: 'images/casual-12.jpeg',
     images: ['images/casual-12.jpeg', 'images/casual-8.jpeg'],
@@ -336,7 +336,7 @@ export const allProducts: Product[] = [
   // African Culture Collection
   {
     id: 'african-1',
-    name: 'African Culture Design 1',
+    name: 'African Culture 1',
     price: 55000,
     image: 'images/african-1.jpeg',
     images: ['images/african-1.jpeg', 'images/african-2.jpeg', 'images/african-3.jpeg'],
@@ -350,8 +350,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'african-4',
-    name: 'African Culture Design 4',
+    id: 'african-2',
+    name: 'African Culture 2',
     price: 40000,
     image: 'images/african-4.jpeg',
     category: 'african-culture' as const,
@@ -364,8 +364,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'african-5',
-    name: 'African Culture Design 5',
+    id: 'african-3',
+    name: 'African Culture 3',
     price: 40000,
     image: 'images/african-5.jpeg',
     category: 'african-culture' as const,
@@ -378,8 +378,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'african-6',
-    name: 'African Culture Design 6',
+    id: 'african-4',
+    name: 'African Culture 4',
     price: 40000,
     image: 'images/african-6.jpeg',
     images: ['images/african-6.jpeg', 'images/african-7.jpeg'],
@@ -393,8 +393,8 @@ export const allProducts: Product[] = [
     inStock: true,
   },
   {
-    id: 'african-8',
-    name: 'African Culture Design 8',
+    id: 'african-5',
+    name: 'African Culture 5',
     price: 40000,
     image: 'images/african-8.jpeg',
     category: 'african-culture' as const,
@@ -409,5 +409,5 @@ export const allProducts: Product[] = [
 ];
 
 export const featuredProducts = allProducts.filter(p => 
-  ['casual-1', 'casual-2', 'casual-3', 'casual-10', 'casual-9'].includes(p.id)
+  ['casual-1', 'casual-2', 'casual-3', 'casual-4', 'casual-5'].includes(p.id)
 );
