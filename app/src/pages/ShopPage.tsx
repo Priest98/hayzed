@@ -17,30 +17,21 @@ export default function ShopPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
+    // Immediate entrance animation on mount
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    if (selectedCategory === 'all') {
-      searchParams.delete('category');
-    } else {
-      searchParams.set('category', selectedCategory);
+    const currentCategory = searchParams.get('category') || 'all';
+    if (selectedCategory !== currentCategory) {
+      if (selectedCategory === 'all') {
+        searchParams.delete('category');
+      } else {
+        searchParams.set('category', selectedCategory);
+      }
+      setSearchParams(searchParams, { replace: true });
     }
-    setSearchParams(searchParams);
   }, [selectedCategory, searchParams, setSearchParams]);
 
   const filteredProducts = selectedCategory === 'all'
