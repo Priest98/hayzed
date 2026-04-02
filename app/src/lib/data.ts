@@ -161,7 +161,7 @@ export const allProducts: Product[] = [
   {
     id: 'kaftan-2',
     name: 'Premium Kaftan 2',
-    price: 40000,
+    price: 60000,
     image: 'images/kaftan-2.jpeg',
     images: ['images/kaftan-2.jpeg', 'images/kaftan-4.jpeg'],
     category: 'kaftan' as const,
@@ -292,7 +292,7 @@ export const allProducts: Product[] = [
   {
     id: 'casual-5',
     name: 'Casual Luxe 5',
-    price: 35000,
+    price: 45000,
     image: 'images/casual-10.jpeg',
     images: ['images/casual-10.jpeg', 'images/casual-5.jpeg'],
     category: 'casual' as const,
@@ -395,7 +395,7 @@ export const allProducts: Product[] = [
   {
     id: 'african-5',
     name: 'African Culture 5',
-    price: 40000,
+    price: 55000,
     image: 'images/african-8.jpeg',
     category: 'african-culture' as const,
     description: 'A masterpiece representing the rich heritage and contemporary style of African culture.',
