@@ -408,5 +408,5 @@ export const allProducts: Product[] = [
 ];
 
 export const featuredProducts = allProducts.filter(p => 
-  ['casual-1', 'casual-2', 'casual-3', 'casual-5', 'casual-6'].includes(p.id)
+  ['casual-1', 'casual-2', 'casual-3', 'casual-10', 'casual-9'].includes(p.id)
 );
