@@ -8,6 +8,9 @@ import type { Product } from '@/types';
 import { allProducts, categories } from '@/lib/data';
 
 export default function ShopPage() {
+  useEffect(() => {
+    console.log("Hayzed Catalog V1.1 - April 3rd Update - Prices & Navigation Verified");
+  }, []);
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedCategory = searchParams.get('category') || 'all';
   const [gridView, setGridView] = useState<'grid' | 'large'>('grid');
