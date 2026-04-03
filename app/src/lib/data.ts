@@ -352,7 +352,7 @@ export const allProducts: Product[] = [
   {
     id: 'african-2',
     name: 'African Culture 2',
-    price: 40000,
+    price: 55000,
     image: 'images/african-4.jpeg',
     category: 'african-culture' as const,
     description: 'A masterpiece representing the rich heritage and contemporary style of African culture.',
@@ -395,7 +395,7 @@ export const allProducts: Product[] = [
   {
     id: 'african-5',
     name: 'African Culture 5',
-    price: 55000,
+    price: 40000,
     image: 'images/african-8.jpeg',
     category: 'african-culture' as const,
     description: 'A masterpiece representing the rich heritage and contemporary style of African culture.',
