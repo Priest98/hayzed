@@ -37,12 +37,23 @@ export default function Footer() {
   const [showDialog, setShowDialog] = useState(false);
   const [dialogMessage, setDialogMessage] = useState('');
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      setDialogMessage('Thank you for subscribing! We will keep you updated on our latest collections.');
-      setShowDialog(true);
-      setEmail('');
+      try {
+        const response = await fetch('https://formspree.io/f/mqakozoy', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, _subject: 'New Newsletter Subscription' }),
+        });
+        if (response.ok) {
+          setDialogMessage('Thank you for subscribing! We will keep you updated on our latest collections.');
+          setShowDialog(true);
+          setEmail('');
+        }
+      } catch (error) {
+        console.error('Newsletter error:', error);
+      }
     }
   };
 

@@ -74,13 +74,18 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('/.netlify/functions/submit-form', {
+      // Using Formspree for reliable email delivery
+      // Replace 'mqakozoy' with your actual Formspree Form ID
+      const response = await fetch('https://formspree.io/f/mqakozoy', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, source: 'Contact Page' }),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, _subject: `New Inquiry: ${formData.subject}` }),
       });
       if (response.ok) {
         setShowDialog(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);

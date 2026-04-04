@@ -117,13 +117,25 @@ export default function CustomTailoringPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('/.netlify/functions/submit-form', {
+      // Using Formspree for reliable email delivery
+      const response = await fetch('https://formspree.io/f/mqakozoy', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, source: 'Custom Tailoring' }),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, _subject: `Custom Tailoring Request: ${formData.name}` }),
       });
       if (response.ok) {
         setShowDialog(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          fabric: '',
+          occasion: '',
+          preferredDate: '',
+          notes: '',
+        });
+      } else {
+        throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);
