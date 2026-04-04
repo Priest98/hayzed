@@ -41,7 +41,7 @@ export default function Footer() {
     e.preventDefault();
     if (email) {
       try {
-        const response = await fetch('https://formspree.io/Hayzedcasual@gmail.com', {
+        const response = await fetch('https://formspree.io/f/mjgpaqoy', {
           method: 'POST',
           headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, _subject: 'New Newsletter Subscription' }),

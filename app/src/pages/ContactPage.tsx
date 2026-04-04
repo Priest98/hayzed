@@ -75,7 +75,7 @@ export default function ContactPage() {
     e.preventDefault();
     try {
       // Using Formspree for reliable email delivery
-      const response = await fetch('https://formspree.io/Hayzedcasual@gmail.com', {
+      const response = await fetch('https://formspree.io/f/mjgpaqoy', {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, _subject: `New Inquiry: ${formData.subject}` }),
