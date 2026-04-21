@@ -131,11 +131,17 @@ export const allProducts: Product[] = [
   {
     id: 'agbada-5',
     name: 'Luxe Agbada 5',
-    price: 100000,
-    image: 'images/agbada-10.jpeg',
-    images: ['images/agbada-10.jpeg', 'images/agbada-9.jpeg'],
+    price: 250000,
+    image: 'images/agbada-5-1.jpeg',
+    images: [
+      'images/agbada-5-1.jpeg',
+      'images/agbada-5-2.jpeg',
+      'images/agbada-5-3.jpeg',
+      'images/agbada-5-4.jpeg',
+      'images/agbada-5-5.jpeg'
+    ],
     category: 'agbada' as const,
-    description: 'A grand and majestic Agbada set featuring contrasting premium textures and signature artisanal detailing.',
+    description: 'A grand and majestic Agbada set featuring contrasting premium textures and signature artisanal detailing, now captured in high-definition detail.',
     fabric: 'Hand-woven Aso-oke / Premium Silk',
     fit: 'Traditional Grand Fit',
     care: 'Dry Clean Only',
