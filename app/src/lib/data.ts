@@ -417,7 +417,7 @@ export const allProducts: Product[] = [
   {
     id: 'jalab-1',
     name: 'Premium Jalab 1',
-    price: 45000,
+    price: 40000,
     image: 'images/jalabs/IMG_2298.JPG.jpeg',
     category: 'jalabs' as const,
     description: 'A premium, well-tailored Jalab set for the modern man, featuring elegant detailing and superior comfort.',
@@ -431,7 +431,7 @@ export const allProducts: Product[] = [
   {
     id: 'jalab-2',
     name: 'Premium Jalab 2',
-    price: 45000,
+    price: 40000,
     image: 'images/jalabs/IMG_2302.JPG.jpeg',
     category: 'jalabs' as const,
     description: 'A premium, well-tailored Jalab set for the modern man, featuring elegant detailing and superior comfort.',
@@ -445,7 +445,7 @@ export const allProducts: Product[] = [
   {
     id: 'jalab-3',
     name: 'Premium Jalab 3',
-    price: 45000,
+    price: 40000,
     image: 'images/jalabs/IMG_2305.JPG.jpeg',
     category: 'jalabs' as const,
     description: 'A premium, well-tailored Jalab set for the modern man, featuring elegant detailing and superior comfort.',
@@ -459,7 +459,7 @@ export const allProducts: Product[] = [
   {
     id: 'jalab-4',
     name: 'Premium Jalab 4',
-    price: 45000,
+    price: 40000,
     image: 'images/jalabs/IMG_2306.JPG.jpeg',
     category: 'jalabs' as const,
     description: 'A premium, well-tailored Jalab set for the modern man, featuring elegant detailing and superior comfort.',
