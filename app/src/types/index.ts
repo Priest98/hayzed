@@ -4,7 +4,7 @@ export interface Product {
   price: number;
   image: string;
   images?: string[];
-  category: 'hz-collection' | 'agbada' | 'kaftan' | 'casual' | 'african-culture' | 'jalabs';
+  category: 'hz-collection' | 'agbada' | 'kaftan' | 'casual' | 'african-culture' | 'jalabs' | 'mens-lace';
   description: string;
   fabric: string;
   fit: string;
