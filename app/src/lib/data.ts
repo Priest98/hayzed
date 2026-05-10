@@ -479,7 +479,7 @@ export const allProducts: Product[] = [
   {
     id: 'mens-lace-1',
     name: 'Mens Lace 1',
-    price: 50000,
+    price: 80000,
     image: 'images/mens-lace/IMG_2498_1.jpg',
     images: [
       'images/mens-lace/IMG_2498_1.jpg',
@@ -499,7 +499,7 @@ export const allProducts: Product[] = [
   {
     id: 'mens-lace-5',
     name: 'Mens Lace 5',
-    price: 50000,
+    price: 80000,
     image: 'images/mens-lace/IMG_2530.jpg',
     images: [
       'images/mens-lace/IMG_2530.jpg',
