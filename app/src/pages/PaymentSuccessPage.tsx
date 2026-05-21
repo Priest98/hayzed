@@ -8,20 +8,21 @@ export default function PaymentSuccessPage() {
     const [searchParams] = useSearchParams();
     const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
     const { clearCart } = useCart();
-    const reference = searchParams.get('reference');
+    const transactionId = searchParams.get('transaction_id');
+    const txRef = searchParams.get('tx_ref');
 
     useEffect(() => {
         const verifyPayment = async () => {
-            if (!reference) {
+            if (!transactionId) {
                 setStatus('error');
                 return;
             }
 
             try {
-                const response = await fetch(`/.netlify/functions/paystack-verify?reference=${reference}`);
+                const response = await fetch(`/.netlify/functions/flutterwave-verify?transaction_id=${transactionId}`);
                 const data = await response.json();
 
-                if (data.status && data.data.status === 'success') {
+                if (data.status === 'success' && data.data?.status === 'successful') {
                     setStatus('success');
                     clearCart();
                 } else {
@@ -34,7 +35,7 @@ export default function PaymentSuccessPage() {
         };
 
         verifyPayment();
-    }, [reference, clearCart]);
+    }, [transactionId, clearCart]);
 
     return (
         <div className="min-h-screen flex items-center justify-center p-4 bg-brand-off-white">
@@ -70,7 +71,7 @@ export default function PaymentSuccessPage() {
                         <p className="text-brand-grey">
                             We couldn't verify your payment. If you believe this is an error,
                             please contact our support team with reference: <br />
-                            <code className="text-xs bg-gray-100 p-1 rounded">{reference}</code>
+                            <code className="text-xs bg-gray-100 p-1 rounded">{transactionId || txRef}</code>
                         </p>
                         <div className="space-y-3">
                             <Link to="/checkout">

@@ -11,24 +11,33 @@ const handler: Handler = async (event) => {
         return { statusCode: 400, body: "Email and amount are required" };
     }
 
-    const SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
+    const SECRET_KEY = process.env.FLUTTERWAVE_SECRET_KEY;
 
     if (!SECRET_KEY) {
-        return { statusCode: 500, body: "Paystack Secret Key is missing in environment variables" };
+        return { statusCode: 500, body: "Flutterwave Secret Key is missing in environment variables" };
     }
 
     try {
-        const response = await fetch("https://api.paystack.co/transaction/initialize", {
+        const response = await fetch("https://api.flutterwave.com/v3/payments", {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${SECRET_KEY}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                email,
-                amount: Math.round(amount * 100), // convert to kobo
-                metadata,
-                callback_url: `${process.env.URL || "http://localhost:8888"}/payment-success`,
+                tx_ref: `flw_ref_${Date.now()}_${Math.floor(Math.random() * 1000000)}`,
+                amount: amount,
+                currency: "NGN",
+                redirect_url: `${process.env.URL || "http://localhost:8888"}/payment-success`,
+                customer: {
+                    email: email,
+                    name: metadata?.full_name || "Customer",
+                },
+                meta: metadata,
+                customizations: {
+                    title: "Hayzed Apparel",
+                    description: "Payment for order",
+                },
             }),
         });
 

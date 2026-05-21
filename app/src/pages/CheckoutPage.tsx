@@ -31,7 +31,7 @@ export default function CheckoutPage() {
         setLoading(true);
 
         try {
-            const response = await fetch('/.netlify/functions/paystack-init', {
+            const response = await fetch('/.netlify/functions/flutterwave-init', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -52,8 +52,8 @@ export default function CheckoutPage() {
 
             const data = await response.json();
 
-            if (data.status && data.data.authorization_url) {
-                window.location.href = data.data.authorization_url;
+            if (data.status === 'success' && data.data?.link) {
+                window.location.href = data.data.link;
             } else {
                 alert('Failed to initialize payment. Please try again.');
             }
@@ -116,11 +116,11 @@ export default function CheckoutPage() {
                                         ) : (
                                             <Lock className="w-4 h-4 mr-2" />
                                         )}
-                                        Pay ₦{totalPrice.toLocaleString()} via Paystack
+                                        Pay ₦{totalPrice.toLocaleString()} via Flutterwave
                                     </Button>
                                 </div>
                                 <p className="text-[10px] text-center text-brand-grey uppercase tracking-widest">
-                                    Secure Payment Gateway by Paystack
+                                    Secure Payment Gateway by Flutterwave
                                 </p>
                             </div>
                         </form>

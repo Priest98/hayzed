@@ -1,20 +1,20 @@
 import { Handler } from "@netlify/functions";
 
 const handler: Handler = async (event) => {
-    const reference = event.queryStringParameters?.reference;
+    const transactionId = event.queryStringParameters?.transaction_id;
 
-    if (!reference) {
-        return { statusCode: 400, body: "Reference is required" };
+    if (!transactionId) {
+        return { statusCode: 400, body: "Transaction ID is required" };
     }
 
-    const SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
+    const SECRET_KEY = process.env.FLUTTERWAVE_SECRET_KEY;
 
     if (!SECRET_KEY) {
-        return { statusCode: 500, body: "Paystack Secret Key is missing" };
+        return { statusCode: 500, body: "Flutterwave Secret Key is missing" };
     }
 
     try {
-        const response = await fetch(`https://api.paystack.co/transaction/verify/${reference}`, {
+        const response = await fetch(`https://api.flutterwave.com/v3/transactions/${transactionId}/verify`, {
             headers: {
                 Authorization: `Bearer ${SECRET_KEY}`,
             },
