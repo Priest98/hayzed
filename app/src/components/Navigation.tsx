@@ -14,6 +14,7 @@ const navLinks = [
   { name: 'Collections', href: '/shop' },
   { name: 'About', href: '/about' },
   { name: 'Custom Tailoring', href: '/custom' },
+  { name: 'Academy', href: '/academy' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -51,12 +52,12 @@ export default function Navigation({ scrolled }: NavigationProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-5 lg:gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`text-sm font-medium link-underline transition-colors ${location.pathname === link.href
+                  className={`text-xs lg:text-sm font-medium link-underline transition-colors ${location.pathname === link.href
                       ? 'text-brand-black'
                       : 'text-brand-grey hover:text-brand-black'
                     }`}

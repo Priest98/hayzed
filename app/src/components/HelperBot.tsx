@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { X, Send, Scissors, Ruler, Sparkles, Calendar, ArrowRight, MessageSquare } from 'lucide-react';
+import { X, Send, Scissors, Ruler, Sparkles, Calendar, ArrowRight, MessageSquare, BookOpen } from 'lucide-react';
 import { Button } from './ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -29,6 +29,7 @@ const EXPERT_KNOWLEDGE = {
     fabrics: "We curate only the finest textiles. From hand-woven Aso-oke to premium Polish Cotton and Royal Silks, each fabric is chosen for its character and longevity.",
     tailoring: "Bespoke tailoring is at the heart of Hayzed. Our 5-step process ensures that every garment is a second skin, reflecting your stature and style.",
     booking: "To begin your bespoke journey, I recommend booking a private consultation. Experience the luxury of a perfect fit.",
+    academy: "The Hayzed Fashion Academy offers intensive professional programs in Luxury Kaftan Construction, Menswear Pattern Drafting, Artisanal Embroidery, and Fashion Brand scaling. Classes are limited to 8 students for absolute 1-on-1 mentorship.",
     default: "I appreciate your inquiry. For specific style consultations or measurement advice, our master tailors are available for private appointments."
   }
 };
@@ -69,7 +70,9 @@ export default function HelperBot() {
       let response = EXPERT_KNOWLEDGE.responses.default;
       const lower = input.toLowerCase();
 
-      if (lower.includes('fabric') || lower.includes('material')) {
+      if (lower.includes('academy') || lower.includes('course') || lower.includes('learn') || lower.includes('school') || lower.includes('training') || lower.includes('study') || lower.includes('class')) {
+        response = `${EXPERT_KNOWLEDGE.responses.academy} You can learn more about our curriculum and enrollment terms on our 'Academy' page.`;
+      } else if (lower.includes('fabric') || lower.includes('material')) {
         response = `${EXPERT_KNOWLEDGE.responses.fabrics} Would you like to know about our Aso-oke or Royal Silks specifically?`;
       } else if (lower.includes('tailor') || lower.includes('custom') || lower.includes('measure') || lower.includes('fit') || lower.includes('how it works')) {
         response = `${EXPERT_KNOWLEDGE.responses.tailoring} Our process includes: \n\n${EXPERT_KNOWLEDGE.process.join('\n')}\n\nShall I guide you to our booking page?`;
@@ -190,6 +193,12 @@ export default function HelperBot() {
                 className="px-3 py-1.5 rounded-full border border-brand-gold/20 text-[0.65rem] uppercase tracking-widest text-brand-black hover:bg-brand-gold/10 transition-colors bg-white mt-1"
               >
                 <Ruler className="w-4 h-4 inline mr-1" /> Process
+              </button>
+              <button 
+                onClick={() => setInput('Tell me about your fashion academy')}
+                className="px-3 py-1.5 rounded-full border border-brand-gold/20 text-[0.65rem] uppercase tracking-widest text-brand-black hover:bg-brand-gold/10 transition-colors bg-white mt-1"
+              >
+                <BookOpen className="w-3.5 h-3.5 inline mr-1" /> Academy
               </button>
             </div>
 

@@ -21,6 +21,7 @@ const footerLinks = {
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Our Story', href: '/about' },
+    { name: 'Fashion Academy', href: '/academy' },
     { name: 'Contact', href: '/contact' },
     { name: 'FAQs', href: '/contact' },
   ],

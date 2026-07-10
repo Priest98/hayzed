@@ -14,6 +14,7 @@ import CustomTailoringPage from './pages/CustomTailoringPage';
 import ContactPage from './pages/ContactPage';
 import CheckoutPage from './pages/CheckoutPage';
 import PaymentSuccessPage from './pages/PaymentSuccessPage';
+import AcademyPage from './pages/AcademyPage';
 import CartProvider from './context/CartContext';
 import './App.css';
 
@@ -45,6 +46,7 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/payment-success" element={<PaymentSuccessPage />} />
+              <Route path="/academy" element={<AcademyPage />} />
             </Routes>
           </main>
           <Footer />
