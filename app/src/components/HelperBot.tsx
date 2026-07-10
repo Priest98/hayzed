@@ -29,7 +29,7 @@ const EXPERT_KNOWLEDGE = {
     fabrics: "We curate only the finest textiles. From hand-woven Aso-oke to premium Polish Cotton and Royal Silks, each fabric is chosen for its character and longevity.",
     tailoring: "Bespoke tailoring is at the heart of Hayzed. Our 5-step process ensures that every garment is a second skin, reflecting your stature and style.",
     booking: "To begin your bespoke journey, I recommend booking a private consultation. Experience the luxury of a perfect fit.",
-    academy: "The Hayzed Fashion Academy offers intensive professional programs in Luxury Kaftan Construction, Menswear Pattern Drafting, Artisanal Embroidery, and Fashion Brand scaling. Classes are limited to 8 students for absolute 1-on-1 mentorship.",
+    academy: "The Hayzed Fashion Academy offers an intensive 3-Month Program to master Men's Native Wear (Senator & Kaftan construction, Pattern Drafting, and finishing). Classes start August 10th, 2026 in Ilorin, Kwara State. The fee is ₦300,000 (Early Bird ₦250,000 for the first 5 applicants).",
     default: "I appreciate your inquiry. For specific style consultations or measurement advice, our master tailors are available for private appointments."
   }
 };
