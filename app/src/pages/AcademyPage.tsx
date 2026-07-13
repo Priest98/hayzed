@@ -252,7 +252,7 @@ export default function AcademyPage() {
               </div>
               <div>
                 <span className="block text-[0.65rem] uppercase tracking-widest text-brand-grey font-bold">Training Fee</span>
-                <span className="block text-sm font-semibold text-brand-black mt-1">₦300,000 NGN</span>
+                <span className="block text-sm font-semibold text-brand-black mt-1">₦250,000 NGN</span>
               </div>
             </div>
 
@@ -263,7 +263,7 @@ export default function AcademyPage() {
               </div>
               <div>
                 <span className="block text-[0.65rem] uppercase tracking-widest text-brand-gold font-bold">First 5 Applicants</span>
-                <span className="block text-sm font-bold text-brand-black mt-1">₦250,000 NGN</span>
+                <span className="block text-sm font-bold text-brand-black mt-1">₦200,000 NGN</span>
               </div>
               {/* Highlight ribbon */}
               <div className="absolute top-0 right-0 bg-brand-gold text-brand-black text-[0.55rem] font-bold uppercase tracking-wider px-2 py-0.5 rounded-bl">
@@ -457,7 +457,7 @@ export default function AcademyPage() {
             <p className="text-brand-gold text-sm uppercase tracking-[0.2em] mb-4">Admissions Open</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-black mb-4">Apply for Admission</h2>
             <p className="text-brand-grey max-w-xl mx-auto text-sm">
-              Standard tuition is ₦300,000 NGN. The first 5 applicants secure our early-bird rate of ₦250,000 NGN. 
+              Standard tuition is ₦250,000 NGN. The first 5 applicants secure our early-bird rate of ₦200,000 NGN. 
               Fill out the details below, and our admissions team will contact you within 24 hours.
             </p>
           </div>
